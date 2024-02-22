@@ -36,4 +36,19 @@ public class Movie {
         return genre;
     }
 
+    @java.lang.Override
+    public String toString(){
+        String result = "";
+        result += title + ", " + director + ", " + yearCreated + ", ";
+
+        if (isInColor){
+            result += " er i farve";
+        } else{
+            result += " er ikke i farve";
+        }
+
+        result += ", " + lengthInMinutes + ", " + genre;
+        return result;
+    }
+
 }
