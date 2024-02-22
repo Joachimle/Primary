@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
-        MovieCollection movieCollection = new MovieCollection();
+        //MMovieCollection movieCollection = new MovieCollection();
+        Controller controller = new Controller();
 
         System.out.println("Velkommen til din filmsamling");
         System.out.println("Tast 1; For at oprette en film");
@@ -30,8 +31,8 @@ public class Main {
                 System.out.println("Genre: ");
                 String userGenre = input.next();
 
-                //System.out.println("Du har tilføjet følgende film: " + movieDemo.getTitle() + movieDemo.getDirector() + movieDemo.getYearCreated() + movieDemo.getIsInColor() + movieDemo.getLengthInMinutes() + movieDemo.getGenre());
-                movieCollection.addMovie(userTitle, userDirector, userYearCreated, userIsInColor, userLengthInMinutes, userGenre);
+                //movieCollection.addMovie(userTitle, userDirector, userYearCreated, userIsInColor, userLengthInMinutes, userGenre);
+                controller.addMovie(userTitle, userDirector, userYearCreated, userIsInColor, userLengthInMinutes, userGenre);
 
                 System.out.println("***Velkommen til menuen***");
                 System.out.println("Tast 1; For at oprette en film");
