@@ -27,7 +27,7 @@ public class Movie {
         return yearCreated;
     }
     public boolean getIsInColor(){
-        return true;
+        return isInColor;
     }
     public int getLengthInMinutes(){
         return lengthInMinutes;

@@ -8,6 +8,7 @@ public class MovieCollection {
 
     public void addMovie(String title, String director, int yearCreated, boolean isInColor, int lengthInMinutes, String genre){
         movies[count++] = new Movie(title, director, yearCreated, isInColor, lengthInMinutes, genre);
+        //System.out.println(movies[0]);
     }
 
     public Movie[] getMovies() {
