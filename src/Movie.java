@@ -47,7 +47,7 @@ public class Movie {
             result += "Nej ";
         }
 
-        result += ", Længde i minutter: " + lengthInMinutes + ", Genre: " + genre;
+        result += ", Længde i minutter: " + lengthInMinutes + ", Genre: " + genre + "\n";
         return result;
     }
 

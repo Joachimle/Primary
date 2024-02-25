@@ -18,15 +18,16 @@ public class MovieCollection {
     }
 
     public String searchMovie(String searchMovieInput){
-        String s = "";
-        // s +=
-        for (Movie sm : movieArrayList){
-            if (sm.getTitle().toLowerCase().contains(searchMovieInput.toLowerCase())){
-                //return sm.toString();
-                //Ved at fjerne vores return, kan vi ændre koden til at returnere en String med samtlige matches
+        String searchMovieStr = "";
+
+        for (Movie movieSearch : movieArrayList){
+            if (movieSearch.getTitle().toLowerCase().contains(searchMovieInput.toLowerCase())){
+                searchMovieStr += movieSearch.toString();
+            } else {
+                return "Ingen film matcher denne søgning, prøv igen\n";
             }
         }
-        return "fejl";
+        return searchMovieStr;
     }
 }
 
