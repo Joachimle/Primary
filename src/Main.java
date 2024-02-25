@@ -3,25 +3,26 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
-        //MMovieCollection movieCollection = new MovieCollection();
+        input.useDelimiter("\n");
+
         Controller controller = new Controller();
 
         System.out.println("Velkommen til din filmsamling");
         System.out.println("Tast 1; For at oprette en film");
         System.out.println("Tast 2; For at afslutte");
         System.out.println("Tast 3; For at se en liste over dine film");
+        System.out.println("Tast 4: For at søge i din filmkollektion");
 
         int sentinel = 2;
         int choice = input.nextInt();
 
         while (choice != sentinel) {
-            if (choice == 1) {
-                input.nextLine();
+            if (choice == 1){
                 System.out.println("For at tilføje en film, indtast venligst følgende: ");
                 System.out.println("Titel: ");
-                String userTitle = input.nextLine();
+                String userTitle = input.next();
                 System.out.println("Instruktør: ");
-                String userDirector = input.nextLine();
+                String userDirector = input.next();
                 System.out.println("Udgivelsesår: ");
                 int userYearCreated = input.nextInt();
 
@@ -29,6 +30,7 @@ public class Main {
                 boolean userIsInColor = false;
                 String farve = input.next();
                 farve = farve.toLowerCase();
+
                 if (farve.equals("ja")){
                     userIsInColor = true;
                 }
@@ -44,20 +46,39 @@ public class Main {
                 System.out.println("Tast 1; For at oprette en film");
                 System.out.println("Tast 2; For at afslutte");
                 System.out.println("Tast 3; For at se en liste over dine film");
+                System.out.println("Tast 4: For at søge i din filmkollektion");
+
 
                 choice = input.nextInt();
             }
             if (choice == 3) {
+                System.out.println("\nFilmliste\n");
                 System.out.println(controller.showMovieCollection());
 
                 System.out.println("***Velkommen til menuen***");
                 System.out.println("Tast 1; For at oprette en film");
                 System.out.println("Tast 2; For at afslutte");
                 System.out.println("Tast 3; For at se en liste over dine film");
+                System.out.println("Tast 4: For at søge i din filmkollektion");
+
 
                 choice = input.nextInt();
+            }
+            if (choice == 4) {
+                System.out.println("Du har valgt at tilgå søgefunktionen ");
+                System.out.println("Indtast et eller flere bogstaver af en filmtitel: ");
+
+                String searchWord = input.next();
+                System.out.println(controller.showSearchMovie(searchWord));
+
+                System.out.println("***Velkommen til menuen***");
+                System.out.println("Tast 1; For at oprette en film");
+                System.out.println("Tast 2; For at afslutte");
+                System.out.println("Tast 3; For at se en liste over dine film");
+                System.out.println("Tast 4: For at søge i din filmkollektion");
             }
             System.out.println("Du har afsluttet programmet");
         }
     }
 }
+

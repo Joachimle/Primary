@@ -9,7 +9,12 @@ public class Controller {
         movieCollection.addMovie(title, director, yearCreated, isInColor, lengthInMinutes, genre);
     }
 
+    //Returnerer hele filmsamlingen som String
     public String showMovieCollection(){
         return movieCollection.toString();
+    }
+
+    public String showSearchMovie(String searchWord){
+        return movieCollection.searchMovie(searchWord);
     }
 }

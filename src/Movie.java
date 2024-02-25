@@ -39,15 +39,15 @@ public class Movie {
     @java.lang.Override
     public String toString(){
         String result = "";
-        result += title + ", " + director + ", " + yearCreated + ", ";
+        result += "Filmtitel: " + title + ", Instruktør: " + director + ", Udgivelsesår: " + yearCreated + ", Farvefilm: ";
 
         if (isInColor){
-            result += " er i farve";
+            result += "Ja ";
         } else{
-            result += " er ikke i farve";
+            result += "Nej ";
         }
 
-        result += ", " + lengthInMinutes + ", " + genre;
+        result += ", Længde i minutter: " + lengthInMinutes + ", Genre: " + genre;
         return result;
     }
 
