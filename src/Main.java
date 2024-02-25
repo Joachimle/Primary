@@ -7,16 +7,19 @@ public class Main {
 
         Controller controller = new Controller();
 
-        System.out.println("Velkommen til din filmsamling");
-        System.out.println("Tast 1; For at oprette en film");
-        System.out.println("Tast 2; For at afslutte");
-        System.out.println("Tast 3; For at se en liste over dine film");
-        System.out.println("Tast 4: For at søge i din filmkollektion");
 
         int sentinel = 2;
-        int choice = input.nextInt();
+        int choice = 0;
 
         while (choice != sentinel) {
+            System.out.println("Velkommen til din filmsamling");
+            System.out.println("Tast 1; For at oprette en film");
+            System.out.println("Tast 2; For at afslutte");
+            System.out.println("Tast 3; For at se en liste over dine film");
+            System.out.println("Tast 4: For at søge i din filmkollektion");
+
+            choice = input.nextInt();
+
             if (choice == 1){
                 System.out.println("For at tilføje en film, indtast venligst følgende: ");
                 System.out.println("Titel: ");
@@ -42,27 +45,11 @@ public class Main {
 
                 controller.addMovie(userTitle, userDirector, userYearCreated, userIsInColor, userLengthInMinutes, userGenre);
 
-                System.out.println("***Velkommen til menuen***");
-                System.out.println("Tast 1; For at oprette en film");
-                System.out.println("Tast 2; For at afslutte");
-                System.out.println("Tast 3; For at se en liste over dine film");
-                System.out.println("Tast 4: For at søge i din filmkollektion");
-
-
-                choice = input.nextInt();
             }
             if (choice == 3) {
                 System.out.println("\nFilmliste\n");
                 System.out.println(controller.showMovieCollection());
 
-                System.out.println("***Velkommen til menuen***");
-                System.out.println("Tast 1; For at oprette en film");
-                System.out.println("Tast 2; For at afslutte");
-                System.out.println("Tast 3; For at se en liste over dine film");
-                System.out.println("Tast 4: For at søge i din filmkollektion");
-
-
-                choice = input.nextInt();
             }
             if (choice == 4) {
                 System.out.println("Du har valgt at tilgå søgefunktionen ");
@@ -70,14 +57,8 @@ public class Main {
 
                 String searchWord = input.next();
                 System.out.println(controller.showSearchMovie(searchWord));
-
-                System.out.println("***Velkommen til menuen***");
-                System.out.println("Tast 1; For at oprette en film");
-                System.out.println("Tast 2; For at afslutte");
-                System.out.println("Tast 3; For at se en liste over dine film");
-                System.out.println("Tast 4: For at søge i din filmkollektion");
             }
-            System.out.println("Du har afsluttet programmet");
+            //System.out.println("Du har afsluttet programmet");
         }
     }
 }
