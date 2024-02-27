@@ -58,8 +58,8 @@ public class Main {
                 String searchWord = input.next();
                 System.out.println(controller.showSearchMovie(searchWord));
             }
-            //System.out.println("Du har afsluttet programmet");
         }
+        System.out.println("Du har afsluttet programmet");
     }
 }
 

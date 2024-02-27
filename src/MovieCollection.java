@@ -23,8 +23,11 @@ public class MovieCollection {
         for (Movie movieSearch : movieArrayList){
             if (movieSearch.getTitle().toLowerCase().contains(searchMovieInput.toLowerCase())){
                 searchMovieStr += movieSearch.toString();
-            } else {
-                return "Ingen film matcher denne søgning, prøv igen\n";
+           // } else {
+             //   return "Ingen film matcher denne søgning, prøv igen\n";
+            }
+            if (!(searchMovieStr.length() > 0)){
+                return "\nIngen film matcher denne søgning, prøv igen";
             }
         }
         return searchMovieStr;
