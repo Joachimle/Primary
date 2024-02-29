@@ -36,6 +36,19 @@ public class Movie {
         return genre;
     }
 
+    public String setTitle(int index, String newTitle){
+        this.title = newTitle;
+        return title;
+    }
+    public String setDirector(int index, String newDirector){
+        this.director = newDirector;
+        return director;
+    }
+    public int setYearCreated(int index, int newYearCreated){
+        this.yearCreated = newYearCreated;
+        return yearCreated;
+    }
+
     @java.lang.Override
     public String toString(){
         String result = "";

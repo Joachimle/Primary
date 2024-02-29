@@ -17,4 +17,5 @@ public class Controller {
     public String showSearchMovie(String searchWord){
         return movieCollection.searchMovie(searchWord);
     }
+    //Kan rettes til at give searchMovieArr
 }

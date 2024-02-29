@@ -17,14 +17,23 @@ public class MovieCollection {
         return result;
     }
 
+    /*public ArrayList<Movie> searchMovieArr(String titel){
+        //Lav ArrayList til evt match
+        //Loop der kører igennem vores collection
+        //Inde i loopet tjekker vi om filmens titel matcher input
+        //Hvis der er et match tilføjer vi til den lokale ArrayList
+        //return ArrayList
+        for (Movie movieSearch : movieArrayList){
+            //!Array.isEmpty (hint)
+        }
+    }
+     */
     public String searchMovie(String searchMovieInput){
         String searchMovieStr = "";
 
         for (Movie movieSearch : movieArrayList){
             if (movieSearch.getTitle().toLowerCase().contains(searchMovieInput.toLowerCase())){
                 searchMovieStr += movieSearch.toString();
-           // } else {
-             //   return "Ingen film matcher denne søgning, prøv igen\n";
             }
             if (!(searchMovieStr.length() > 0)){
                 return "\nIngen film matcher denne søgning, prøv igen";

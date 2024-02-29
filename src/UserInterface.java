@@ -73,7 +73,18 @@ public class UserInterface {
             System.out.println(controller.showSearchMovie(searchWord));
         }
 
-        public void editMovie(){
+        private void editMovie(){
+            //Først kalder vi search, så vi får en arrayList
+            //Vi vil gerne have numre foran filmene i arrayList fra searchMovieArr metoden
+            //Spørg brugeren om hvilket nummer match man vil redigere
+            //Man kalder get(int index) på arraylisten fra search (husk -1)
+                //Movies er de samme uanset, hvilken arrayList de findes i
+            //Nu har vi movie-objektet
+            //Prompt brugeren for hvad der skal ændres (menu: 1. titel, 2. instruktør mv)
+            //Lav set-metoder til alle variable i Movies-klassen, der skal kunne ændres
+            //Prompt brugeren for den nye ændring
+            //Brug set-metode alt efter valg
+            //Skriv det opdaterede movie-objekt ud
 
         }
 
